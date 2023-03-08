@@ -14,7 +14,7 @@ const useGetPosts = (options?: QueryString) => {
   } as QueryString;
 
   const queryBuilder = new URLSearchParams();
-  const params = Object.assign(defaultQueryObject, options);
+  const params: any = Object.assign(defaultQueryObject, options);
 
   Object.keys(params).forEach((key: any) =>
     queryBuilder.append(key, params[key])
